@@ -14,11 +14,6 @@ class TestController extends Controller
   public function index()
   {
     $tests = Test::all();
-
-    // $ddds = DB::table('tests')->select('id')->get();
-    // dd($ddds);
-
-
     return view('test', compact('tests'));
   }
 }

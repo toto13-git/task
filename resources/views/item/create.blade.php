@@ -26,16 +26,11 @@
           </div>
           @endif
 
-
           <button type="submit" class="btn btn-primary" onClick="history.back()">
             戻る
           </button>
-
-
           <form method="post" action="{{route('item.store')}}" enctype="multipart/form-data">
-
             @csrf
-
             商品名
             <input type="text" name="name" value={{ old('name') }}>
             <br>
@@ -49,8 +44,6 @@
             在庫
             <input type=text name="stock" value={{ old('stock') }}>個
             <br>
-
-
             カテゴリー
             <select name="category">
               <option value="">選択してください</option>
@@ -63,15 +56,12 @@
             <textarea name="memo" value={{ old('memo') }}></textarea>
             <br>
             画像
-
             <input type="file" name="image" alt="画像">
-
-
-
             <input class="btn btn-info" type="submit" value="登録する">
           </form>
         </div>
       </div>
     </div>
   </div>
-</div> @endsection
+</div>
+@endsection

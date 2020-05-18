@@ -9,9 +9,6 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use App\Http\Requests\CreateUserRequest;
 use Carbon\Carbon;
-use Illuminate\Contracts\Auth\Access\Authorizable as AuthorizableContract;
-use Illuminate\Foundation\Auth\Access\Authorizable;
-use Gate;
 
 class ItemController extends Controller
 {
@@ -19,7 +16,6 @@ class ItemController extends Controller
   {
     // ログイン状態を判断するミドルウェア
     $this->middleware('auth');
-    // $this->middleware('can:view,item')->only('show');
   }
 
   /**
@@ -82,23 +78,10 @@ class ItemController extends Controller
   public function show($id, Item $item, User $user)
   {
     //
-
-    // Gate::authorize('aaa', $item);
-
     $user = Auth::id();
     $item = Item::find($id);
 
     if ($user == $item->user_id) {
-
-
-      // $user = Auth::id();
-      // $this->authorize('view', $item);
-
-
-
-      // $item = Item::find($id);
-      // dd($item);
-
       if ($item->category == 0) {
         $category = '選択していません';
       }
@@ -111,13 +94,6 @@ class ItemController extends Controller
       if ($item->category == 3) {
         $category = 'その他';
       }
-      // if ($item->stock == null) {
-      //   $stock = '0';
-      // }
-      // if ($item->stock) {
-      //   $stock = $item->stock;
-      // }
-
 
       //賞味期限までの日数
       $dt = new Carbon;
@@ -127,9 +103,8 @@ class ItemController extends Controller
       $m = $item->sell_by_month;
       $d = $item->sell_by_day;
 
-      $sellBy = Carbon::create($Y, $m, $d); //ここにユーザーからの値を入れる
+      $sellBy = Carbon::create($Y, $m, $d);
       $diff = $today->diff($sellBy);
-
 
       if ($Y == null || $m == null || $d == null) {
         $day = '賞味期限を設定していません';
@@ -144,14 +119,11 @@ class ItemController extends Controller
       if ($today < $sellBy) {
         $day = $diff->format('賞味期限まであと%a日です');
       }
-
       return view('item.show', compact('item', 'category', 'day'));
     } else {
-
       return redirect()->route('user.show', ['id' => $user])->with('redirect_messgae', 'そのページはアクセスできません！');
     }
   }
-
   /**
    * Show the form for editing the specified resource.
    *
@@ -162,10 +134,10 @@ class ItemController extends Controller
   {
     $user = Auth::id();
     $item = Item::find($id);
+
     if ($user == $item->user_id) {
       return view('item.edit', compact('item', 'user'));
     } else {
-
       return redirect()->route('user.show', ['id' => $user])->with('redirect_messgae', 'そのページはアクセスできません！');
     }
   }
@@ -190,15 +162,11 @@ class ItemController extends Controller
     $item->stock = $request->input('stock');
     $item->category = $request->input('category');
     $item->memo = $request->input('memo');
-
     $image = $request->file('image');
-
     if ($image != '') {
       $item->image = $request->file('image')->store('imgs', 'public');
     }
-
     $item->user_id = $request->user()->id;
-
     $item->save();
 
     return redirect()->route('user.show', ['id' => $user]);
@@ -223,7 +191,6 @@ class ItemController extends Controller
   public function del(Request $request)
   {
     $user = Auth::id();
-
     $check_ids = $request->input('check_ids');
     $item = Item::whereIn('id', $check_ids);
     $item->delete();

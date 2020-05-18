@@ -32,10 +32,6 @@ class UserPolicy
   public function view($id, User $user, Item $item)
   {
     //
-    // $auth = Auth::id();
-    // $user = User::find($id)->id;
-    // return $auth === $user;
-    return $user->id === $item->user_id;
   }
 
   /**

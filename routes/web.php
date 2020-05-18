@@ -20,10 +20,7 @@ Route::get('/', function () {
 });
 
 Route::group(['prefix' => 'user', 'middleware' => 'auth'], function () {
-  // Route::get('index/{id}', 'UserController@index')->name('user.index');
   Route::get('show/{id}', 'UserController@show')->name('user.show');
-
-  // Route::get('show/{id}', 'UserController@show')->name('user.show');
 });
 
 Route::group(['prefix' => 'item', 'middleware' => 'auth'], function () {
@@ -35,11 +32,6 @@ Route::group(['prefix' => 'item', 'middleware' => 'auth'], function () {
   Route::post('destroy/{id}', 'ItemController@destroy')->name('item.destroy');
   Route::post('del', 'ItemController@del')->name('item.del');
 });
-
-
-
-
-
 
 Auth::routes();
 

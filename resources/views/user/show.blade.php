@@ -45,7 +45,6 @@
             <input type="submit" class="btn btn-danger" value="選択した全ての商品を削除" onclick="allDel(this);return false;">
             <table class=" table table-striped">
               <thead>
-
                 <tr>
                   <th>削除</th>
                   <th>画像</th>
@@ -62,9 +61,7 @@
                 <tr>
                   <td scope="row">
                     <input type="checkbox" id="cbox" name="check_ids[]" value="{{ $item->id }}">
-
                   </td>
-
                   @if($item->image)
                   <td>
                     <img src="{{asset('storage/'.$item->image)}}" width="80" height="80" name='image' alt="画像">
@@ -74,15 +71,11 @@
                     <img src="/storage/imgs/noimage.jpg" width="80" height="80" alt="画像">
                   </td>
                   @endif
-
                   <td>{{ $item->name }}</td>
                   <td>{{ $item->sell_by_year }} </td>
                   <td>{{ $item->sell_by_month }} </td>
                   <td>{{ $item->sell_by_day }} </td>
                   <td>{{ $item->stock }}</td>
-
-
-
                   <td>
                     <script>
                       var y = '{{ $item->sell_by_year }}'
@@ -125,15 +118,12 @@
           </tr>
           @endforeach
           </tbody>
-
           </table>
-
+          <input type="submit" class="btn btn-danger" value="選択した全ての商品を削除" onclick="allDel(this);return false;">
           {{$items->links()}}
-
         </div>
       </div>
     </div>
   </div>
 </div>
-
 @endsection

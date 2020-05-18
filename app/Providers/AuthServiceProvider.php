@@ -19,10 +19,8 @@ class AuthServiceProvider extends ServiceProvider
    */
   protected $policies = [
     // 'App\Model' => 'App\Policies\ModelPolicy',
-    Item::class => ItemPolicy::class,
-    User::class => UserPolicy::class,
-
-
+    // Item::class => ItemPolicy::class,
+    // User::class => UserPolicy::class,
   ];
 
   /**
@@ -33,28 +31,5 @@ class AuthServiceProvider extends ServiceProvider
   public function boot()
   {
     $this->registerPolicies();
-
-
-    Gate::define('aaa', function (User $user) {
-      //   //
-      $auth = Auth::id();
-      $user = User::find($auth)->id;
-      return $auth === $user;
-      // $user = Auth::id();
-      // $item = User::all()->items()->user_id;
-      // dd($item);
-      // $item = Item::find();
-      // dd($user);
-      // return $user === $item;
-
-
-      // return $user->id == $item->user_id;
-      // if ($user->id == $item->user_id) {
-      //   return true;
-      // } 
-      // else {
-      //   return redirect()->route('/home');
-      // }
-    });
   }
 }
