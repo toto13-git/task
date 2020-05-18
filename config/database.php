@@ -51,7 +51,7 @@ return [
       'database' => env('DB_DATABASE', 'task'),
       'username' => env('DB_USERNAME', 'user_1'),
       'password' => env('DB_PASSWORD', '123qwe'),
-      'unix_socket' => '/Applications/MAMP/tmp/mysql/mysql.sock',
+      'unix_socket' => env('DB_SOCKET', ''),
       'charset' => 'utf8mb4',
       'collation' => 'utf8mb4_general_ci',
       'prefix' => '',
