@@ -15,7 +15,7 @@
           @endif
 
           createです
-          <!-- エラー文を表示するコード リストで表示される -->
+          <!-- エラー文を表示するコードリストで表示される -->
           @if ($errors->any())
           <div class="alert alert-danger">
             <ul>
