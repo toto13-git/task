@@ -13,7 +13,7 @@
             {{ session('status') }}
           </div>
           @endif
-          ログインしています!
+          ログイン中です!
           <br>
           <a class="navbar-brand" href="{{ route('user.show',['id'=>$user]) }}">
             マイページへ
