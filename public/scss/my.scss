@@ -1,0 +1,241 @@
+// html {
+//    font-size: 62.5%;
+//   }
+
+.noimage {
+  background-image: url("/storage/imgs/noimage.jpg");
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+}
+
+// .pagination {
+//   margin-top: 1rem;
+// }
+
+// .btn-danger {
+//   margin: 1rem 0 1rem 0;
+// }
+
+.menu {
+  display: flex;
+  height: 4rem;
+
+  &__register,
+  &__list {
+    // margin: auto 0;
+    &-btn {
+      white-space: nowrap;
+      min-width: 48px;
+      font-size: 1rem;
+      display: flex;
+      padding: 0.3rem 0.7rem 0.3rem 1rem;
+      text-decoration: none;
+      color: #f6f6e9;
+      background: #00a40f;
+      border: solid 2px #00a40f;
+      box-sizing: border-box;
+      border-radius: 5px;
+      letter-spacing: 0.3rem;
+      transition: 0.3s;
+
+      &:hover {
+        background: #f6f6e9;
+        color: #00a40f;
+        border: solid 2px #00a40f;
+      }
+    }
+  }
+
+  &__list {
+    margin: 0 10px;
+  }
+
+  &__search {
+    // margin-left: auto;
+
+    &-btn {
+      font-size: 1rem;
+      // display: inline-block;
+      padding: 0.3rem 0.7rem 0.3rem 1rem;
+      text-decoration: none;
+      color: #f6f6e9;
+      background: #00a40f;
+      border: solid 2px #00a40f;
+      box-sizing: border-box;
+      border-radius: 0 2rem 2rem 0;
+      letter-spacing: 0.3rem;
+      transition: 0.3s;
+
+      &:hover {
+        background: #f6f6e9;
+        color: #00a40f;
+        border: solid 2px #00a40f;
+      }
+    }
+    &-area {
+      font-size: 1rem;
+      margin-right: -4px;
+      // display: inline-block;
+      padding: 0.3rem 0.7rem 0.3rem 1rem;
+      border-radius: 2rem 0 0 2rem;
+      border: 2px solid #00a40f;
+      border-right-style: none;
+      outline: 0; /* 入力の薄い枠を非表示  */
+    }
+    ::placeholder {
+      color: #ccc;
+    }
+  }
+}
+
+// .info {
+//   // border: solid 1px;
+
+//   &__wrapper {
+//     // border: solid 1px;
+//     display: inline-block;
+
+.delete {
+  display: inline-block;
+
+  // border: solid 1px;
+  // width: 3rem;
+
+  &__btn {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 1rem;
+    // text-align: center;
+    font-weight: bold;
+    margin: 0.5rem;
+    // margin-right: -3px;
+    background-color: #ee0028;
+    color: #fff;
+    // letter-spacing: 0.3rem;
+    padding: 0.3rem 0.8rem;
+    border-radius: 2rem;
+    border: 2px solid #ee0028;
+    box-sizing: border-box;
+    border-radius: 5px;
+    outline: 0; /* 入力の薄い枠を非表示  */
+    transition: 0.3s;
+    &:hover {
+      background: #f6f6e9;
+      color: #ee0028;
+      border: solid 2px #ee0028;
+    }
+  }
+}
+// }
+&__list {
+  // border: solid 1px;
+  width: 500px;
+  display: inline-block;
+  // margin: -200px 0 0 0;
+  margin-bottom: 0;
+  &-ul {
+    // margin: 10px;
+    list-style: none;
+    font-weight: bold;
+    letter-spacing: 0.2rem;
+    // border: solid 1px;
+    padding: 0;
+    &-li {
+      margin: 0;
+      display: inline-block;
+      // border: solid 1px;
+    }
+  }
+}
+// }
+
+.item-show {
+  display: flex;
+  // margin-left: 15px;
+  &__btn {
+    width: 100%;
+
+    font-size: 1rem;
+    display: flex;
+    padding: 0.3rem 0.7rem 0.3rem 1rem;
+    text-decoration: none;
+    color: #f6f6e9;
+    background: orange;
+    border: solid 2px orange;
+    box-sizing: border-box;
+    border-radius: 5px;
+    letter-spacing: 0.3rem;
+    transition: 0.3s;
+
+    &:hover {
+      background: #f6f6e9;
+      color: orange;
+      border: solid 2px orange;
+    }
+  }
+}
+// .stock-show {
+//   text-align: right;
+// }
+
+.stock {
+  white-space: pre;
+  // padding-right: 10px;
+}
+
+.line {
+  border: solid 0.5px #ccc;
+  margin-bottom: 8px;
+}
+table {
+  width: 100%;
+}
+table th {
+  /*thに対して*/
+  color: #ff9800; /*文字色*/
+  background: #fff5e5; /*背景色*/
+}
+
+table td {
+  /*tdに対して*/
+  color: gray;
+}
+
+.th-top {
+  width: 50px;
+}
+
+.th-bottom {
+  width: 72px;
+}
+
+.cbox {
+  margin-left: 30px;
+  vertical-align: 1.5rem;
+}
+
+.css-br::after {
+  content: "\A";
+  white-space: pre;
+}
+
+@media screen and (max-width: 900px) {
+  .menu {
+    display: block;
+    margin-bottom: 32px;
+  }
+  .menu__search {
+    margin: 0;
+    vertical-align: middle;
+  }
+  .menu__register,
+  .menu__list {
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+  .css-br::after {
+    content: "\A";
+    white-space: pre;
+  }
+}

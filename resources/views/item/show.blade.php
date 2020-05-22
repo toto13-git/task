@@ -49,7 +49,7 @@
           @endif
           <form method="get" action="{{route('item.edit', ['id'=>$item])}}">
             <button type="submit" class="btn btn-primary">
-              編集ページへ
+              編集 ＞
             </button>
           </form>
         </div>

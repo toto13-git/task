@@ -24,7 +24,7 @@
           </div>
           @endif
           <!-- 備蓄リスト戻る -->
-          <a class="navbar-brand" href="{{ url('user/show', ['id' => $user]) }}">備蓄リストへ</a>
+          <a class="navbar-brand" href="{{ url('user/show', ['id' => $user]) }}">マイページTopへ</a>
           <br>
           <!-- 戻るを押したらマイページへ戻る -->
           <button type="submit" class="btn btn-primary" onClick="history.back()">
