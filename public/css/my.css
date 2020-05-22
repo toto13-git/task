@@ -101,6 +101,9 @@ __list-ul-li {
   margin: 0;
   display: inline-block;
 }
+.item-name {
+  font-weight: 600;
+}
 .item-show {
   display: flex;
 }
