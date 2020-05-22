@@ -4,126 +4,177 @@
 
 <div class="container">
   <div class="row justify-content-center">
-    <div class="col-md-8">
-      <div class="card">
-        <div class="card-header">
-          <div class="user_id">
-            {{ $user->name }}さんの備蓄リスト
-          </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="user_id">
+          {{ $user->name }}さんの備蓄リスト
         </div>
+      </div>
 
-        <div class="card-body">
-          @if (session('status'))
-          <div class="alert alert-success" role="alert">
-            {{ session('status') }}
-          </div>
-          @endif
-          @if (session('redirect_messgae'))
-          <div class="alert alert-danger" role="alert">
-            {{ session('redirect_messgae') }}
-          </div>
-          @endif
+      <div class="card-body">
+        @if (session('status'))
+        <div class="alert alert-success" role="alert">
+          {{ session('status') }}
+        </div>
+        @endif
+        @if (session('redirect_messgae'))
+        <div class="alert alert-danger" role="alert">
+          {{ session('redirect_messgae') }}
+        </div>
+        @endif
+        <div class="menu">
 
-          <form method="get" action="{{route('user.show', ['id' => $user])}}" class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" name="search" type="search" placeholder="商品名を検索" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">検索</button>
-          </form>
-          <form method="get" action="{{route('item.create')}}">
-            <button type="submit" class="btn btn-primary">
-              商品登録
-            </button>
-          </form>
-          <form method="get" action="">
-            <button type="submit" class="btn btn-primary">
-              商品一覧
-            </button>
-          </form>
-
-          <form method="post" action="{{ route('item.del')}}" name="del">
-            @csrf
-            <!-- <a href="{{ route('item.del')}}" class="btn btn-danger">削除する</a> -->
-            <input type="submit" class="btn btn-danger" value="選択した全ての商品を削除" onclick="allDel(this);return false;">
-            <table class=" table table-striped">
-              <thead>
-                <tr>
-                  <th>削除</th>
-                  <th>画像</th>
-                  <th>名前</th>
-                  <th>賞味期限 年</th>
-                  <th>月</th>
-                  <th>日</th>
-                  <th>在庫</th>
-                  <th>賞味期限まで</th>
-                </tr>
-              </thead>
-              <tbody>
-                @foreach ($items as $item)
-                <tr>
-                  <td scope="row">
-                    <input type="checkbox" id="cbox" name="check_ids[]" value="{{ $item->id }}">
-                  </td>
-                  @if($item->image)
-                  <td>
-                    <img src="{{asset('storage/'.$item->image)}}" width="80" height="80" name='image' alt="画像">
-                  </td>
-                  @else
-                  <td>
-                    <img src="/storage/imgs/noimage.jpg" width="80" height="80" alt="画像">
-                  </td>
-                  @endif
-                  <td>{{ $item->name }}</td>
-                  <td>{{ $item->sell_by_year }} </td>
-                  <td>{{ $item->sell_by_month }} </td>
-                  <td>{{ $item->sell_by_day }} </td>
-                  <td>{{ $item->stock }}</td>
-                  <td>
-                    <script>
-                      var y = '{{ $item->sell_by_year }}'
-                      var m = '{{ $item->sell_by_month }}'
-                      var d = '{{ $item->sell_by_day }}'
-
-                      if (y === '' || m === '' || d === '') {
-                        exit();
-                      } else;
-
-                      if (m.length === 1) {
-                        m = '0' + m
-                      }
-                      if (d.length === 1) {
-                        d = '0' + d
-                      } else;
-
-                      var now_jpn = moment();
-                      var fromDate = now_jpn.format('YYYYMMDD');
-                      var toDate = moment(y + m + d);
-                      var day = toDate.diff(fromDate, 'days');
-
-                      if (day === 0) {
-                        document.write('本日までです!');
-                      } else if (day < 0) {
-                        document.write('過ぎました!');
-                      } else if (day) {
-                        document.write('残り' + day + '日です');
-                      } else;
-                    </script>
-                  </td>
-          </form>
-          <td>
-            <form method="get" action="{{route('item.show', ['id' =>$item->id])}}">
-              <button type="submit" class="btn btn-primary">
-                詳細・編集
+          <div class="menu__register">
+            <form method="get" action="{{route('item.create')}}">
+              <button type="submit" class="menu__register-btn">
+                登録
               </button>
             </form>
-          </td>
-          </tr>
-          @endforeach
-          </tbody>
-          </table>
-          <input type="submit" class="btn btn-danger" value="選択した全ての商品を削除" onclick="allDel(this);return false;">
-          {{$items->links()}}
+          </div>
+
+          <div class="menu__list">
+            <form method="get" action="">
+              <button type="submit" class="menu__list-btn">
+                一覧
+              </button>
+            </form>
+          </div>
+
+
+          <div class="menu__search">
+            <form method="get" action="{{route('user.show', ['id' => $user])}}">
+              <input class="menu__search-area" name="search" type="search" placeholder="商品名を検索" aria-label="Search">
+              <button class="menu__search-btn" type="submit">検索</button>
+            </form>
+          </div>
+
         </div>
+
+
+
+
+        <form method="post" action="{{ route('item.del')}}" name="del">
+          @csrf
+          <table>
+            <thead>
+              <tr>
+                <th class="th-top" rowspan="2">
+                  <div class="delete">
+                    <input type="submit" class="delete__btn" value="X" onclick="allDel(this);return false;">
+                  </div>
+                </th>
+                <!-- <th>画像</th> -->
+                <th colspan="5">名前</th>
+                <th class="th-bottom" class="stock">在庫</th>
+              </tr>
+
+              <tr>
+
+                <th colspan="3">賞味期限</th>
+                <th colspan="2">残り日数</th>
+
+                <th><span class="css-br">詳細</span> 編集</th>
+              </tr>
+              <tr>
+                <td colspan="7">
+                  <div class="line"></div>
+                </td>
+              </tr>
+            </thead>
+
+            <tbody>
+              @foreach ($items as $item)
+              <tr>
+                <td rowspan="2">
+                </td>
+              </tr>
+              <!-- @if($item->image)
+                <td>
+                  <img src="{{asset('storage/'.$item->image)}}" width="80" height="80" name='image' alt="画像">
+                </td>
+                @else
+                <td>
+                  <img src="/storage/imgs/noimage.jpg" width="80" height="80" alt="画像">
+                </td>
+                @endif -->
+              <td colspan="5">{{ $item->name }}</td>
+              <td class="stock-show">{{ $item->stock }}個</td>
+
+              <tr>
+                <td>
+                  <input class="cbox" type="checkbox" id="cbox" name="check_ids[]" value="{{ $item->id }}">
+                </td>
+                <td>{{ $item->sell_by_year }}年</td>
+                <td>{{ $item->sell_by_month }}月</td>
+                <td>{{ $item->sell_by_day }}日</td>
+
+                <td colspan="2">
+
+                  <script>
+                    var y = '{{ $item->sell_by_year }}'
+                    var m = '{{ $item->sell_by_month }}'
+                    var d = '{{ $item->sell_by_day }}'
+
+                    if (y === '' || m === '' || d === '') {
+                      exit();
+                    } else;
+
+                    if (m.length === 1) {
+                      m = '0' + m
+                    }
+                    if (d.length === 1) {
+                      d = '0' + d
+                    } else;
+
+                    var now_jpn = moment();
+                    var fromDate = now_jpn.format('YYYYMMDD');
+                    var toDate = moment(y + m + d);
+                    var day = toDate.diff(fromDate, 'days');
+
+                    if (day === 0) {
+                      document.write('本日までです!');
+                    } else if (day < 0) {
+                      document.write('過ぎました!');
+                    } else if (day) {
+                      document.write('残り' + day + '日');
+                    } else;
+                  </script>
+                </td>
+
+
+
+        </form>
+
+        <td class="item-show">
+
+          <form method="get" action="{{route('item.show', ['id' =>$item->id])}}">
+            <button type="submit" class="item-show__btn">
+              ＞
+            </button>
+
+          </form>
+
+        </td>
+        <tr>
+          <td colspan="7">
+            <div class="line"></div>
+          </td>
+        </tr>
+        </tr>
+        </tr>
+        @endforeach
+        </tbody>
+        </table>
+        <div class="delete">
+          <input type="submit" class="delete__btn" value="X" onclick="allDel(this);return false;">
+
+        </div>
+        {{$items->links()}}
       </div>
     </div>
   </div>
+
+
 </div>
 @endsection
