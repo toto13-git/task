@@ -65,8 +65,8 @@
                   </div>
                 </th>
                 <!-- <th>画像</th> -->
-                <th colspan="5">名前</th>
-                <th class="th-bottom" class="stock">在庫</th>
+                <th colspan="3">名前</th>
+                <th colspan="3" class="th-bottom" class="stock">在庫</th>
               </tr>
 
               <tr>
@@ -98,8 +98,8 @@
                   <img src="/storage/imgs/noimage.jpg" width="80" height="80" alt="画像">
                 </td>
                 @endif -->
-              <td colspan="5">{{ $item->name }}</td>
-              <td class="stock-show">{{ $item->stock }}個</td>
+              <td colspan="3" class="item-name">{{ $item->name }}</td>
+              <td colspan="3" class="stock-show">{{ $item->stock }}個</td>
 
               <tr>
                 <td>
