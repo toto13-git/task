@@ -61,6 +61,7 @@
                     <input type="submit" class="delete__btn" value="X" onclick="allDel(this);return false;">
                   </div>
                 </th>
+                <!-- 今後追加予定の画像投稿機能 -->
                 <!-- <th>画像</th> -->
                 <th colspan="3">名前</th>
                 <th colspan="4" class="th-bottom" class="stock">在庫</th>
@@ -105,7 +106,6 @@
                   <td>{{ $item->sell_by_day }}日</td>
                   <td colspan="3">
 
-
                     <script>
                       var y = '{{ $item->sell_by_year }}'
                       var m = '{{ $item->sell_by_month }}'
@@ -135,9 +135,6 @@
                         document.write('<div class="time-ago">' + '残り' + day + '日' + '</div>');
                       } else;
                     </script>
-
-
-
                   </td>
         </form>
 
@@ -169,7 +166,6 @@
     </div>
   </div>
 </div>
-
 
 </div>
 @endsection
