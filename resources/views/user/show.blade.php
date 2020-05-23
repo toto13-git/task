@@ -76,16 +76,17 @@
                 </td>
               </tr>
             </thead>
-            <tbody>
-              @foreach ($items as $item)
-              <tr>
-                <td class="delbox-wrapper" rowspan="2">
-                  <div class="delbox-wrapper__block">
-                    <input class="delbox-wrapper__block-checkbox" type="checkbox" id="cbox" name="check_ids[]" value="{{ $item->id }}">
-                  </div>
-                </td>
-                <!-- 今後追加予定の画像投稿機能 -->
-                <!-- @if($item->image)
+            @foreach ($items as $item)
+            <div id="w">
+              <tbody>
+                <tr>
+                  <td class="delbox-wrapper" rowspan="2">
+                    <div class="delbox-wrapper__block">
+                      <input class="delbox-wrapper__block-checkbox" type="checkbox" id="cbox" name="check_ids[]" value="{{ $item->id }}">
+                    </div>
+                  </td>
+                  <!-- 今後追加予定の画像投稿機能 -->
+                  <!-- @if($item->image)
                 <td>
                   <img src="{{asset('storage/'.$item->image)}}" width="80" height="80" name='image' alt="画像">
                 </td>
@@ -94,45 +95,50 @@
                   <img src="/storage/imgs/noimage.jpg" width="80" height="80" alt="画像">
                 </td>
                 @endif -->
-                <td colspan="3" class="item-name">{{ $item->name }}</td>
-                <td colspan="4" class="stock-show">{{ $item->stock }}個</td>
-              </tr>
-              <tr>
+                  <td colspan="3" class="item-name">{{ $item->name }}</td>
+                  <td colspan="4" class="stock-show">{{ $item->stock }}個</td>
+                </tr>
+                <tr>
 
-                <td>{{ $item->sell_by_year }}年</td>
-                <td>{{ $item->sell_by_month }}月</td>
-                <td>{{ $item->sell_by_day }}日</td>
-                <td colspan="3">
-                  <script>
-                    var y = '{{ $item->sell_by_year }}'
-                    var m = '{{ $item->sell_by_month }}'
-                    var d = '{{ $item->sell_by_day }}'
+                  <td>{{ $item->sell_by_year }}年</td>
+                  <td>{{ $item->sell_by_month }}月</td>
+                  <td>{{ $item->sell_by_day }}日</td>
+                  <td colspan="3">
 
-                    if (y === '' || m === '' || d === '') {
-                      exit();
-                    } else;
 
-                    if (m.length === 1) {
-                      m = '0' + m
-                    }
-                    if (d.length === 1) {
-                      d = '0' + d
-                    } else;
+                    <script>
+                      var y = '{{ $item->sell_by_year }}'
+                      var m = '{{ $item->sell_by_month }}'
+                      var d = '{{ $item->sell_by_day }}'
 
-                    var now_jpn = moment();
-                    var fromDate = now_jpn.format('YYYYMMDD');
-                    var toDate = moment(y + m + d);
-                    var day = toDate.diff(fromDate, 'days');
+                      if (y === '' || m === '' || d === '') {
+                        exit();
+                      } else;
 
-                    if (day === 0) {
-                      document.write('本日までです!');
-                    } else if (day < 0) {
-                      document.write('過ぎました!');
-                    } else if (day) {
-                      document.write('残り' + day + '日');
-                    } else;
-                  </script>
-                </td>
+                      if (m.length === 1) {
+                        m = '0' + m
+                      }
+                      if (d.length === 1) {
+                        d = '0' + d
+                      } else;
+
+                      var now_jpn = moment();
+                      var fromDate = now_jpn.format('YYYYMMDD');
+                      var toDate = moment(y + m + d);
+                      var day = toDate.diff(fromDate, 'days');
+
+                      if (day === 0) {
+                        document.write('<div class="time-limit">' + '本日までです!' + '</div>');
+                      } else if (day < 0) {
+                        document.write('<div class="time-over">' + '過ぎました!' + '</div>');
+                      } else if (day) {
+                        document.write('<div class="time-ago">' + '残り' + day + '日' + '</div>');
+                      } else;
+                    </script>
+
+
+
+                  </td>
         </form>
 
         <td class="item-show-wrapper">
@@ -151,18 +157,18 @@
             <div class="line"></div>
           </td>
         </tr>
-
-        @endforeach
-        </tbody>
-        </table>
-
-        <div class="delete">
-          <input type="submit" class="delete__btn" value="X" onclick="allDel(this);return false;">
-        </div>
-        {{$items->links()}}
       </div>
+      @endforeach
+      </tbody>
+      </table>
+
+      <div class="delete">
+        <input type="submit" class="delete__btn" value="X" onclick="allDel(this);return false;">
+      </div>
+      {{$items->links()}}
     </div>
   </div>
+</div>
 
 
 </div>
