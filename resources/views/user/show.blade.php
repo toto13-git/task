@@ -154,10 +154,7 @@
             </button>
           </form>
         </td>
-<<<<<<< Updated upstream
         </tr>
-=======
->>>>>>> Stashed changes
 
         <tr>
           <td colspan="7">
@@ -165,12 +162,6 @@
           </td>
         </tr>
 
-<<<<<<< Updated upstream
-
-=======
-        </tr>
-        </tr>
->>>>>>> Stashed changes
         @endforeach
         </tbody>
         </table>
