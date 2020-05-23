@@ -101,13 +101,13 @@ __list-ul-li {
   margin: 0;
   display: inline-block;
 }
-.item-name {
-  font-weight: 600;
-}
-.item-show {
+.item-show-wrapper {
   display: flex;
 }
-.item-show__btn {
+.item-show-wrapper__block {
+  margin: 0 auto;
+}
+.item-show-wrapper__block-btn {
   width: 100%;
   font-size: 1rem;
   display: flex;
@@ -121,7 +121,7 @@ __list-ul-li {
   letter-spacing: 0.3rem;
   transition: 0.3s;
 }
-.item-show__btn:hover {
+.item-show-wrapper__block-btn:hover {
   background: #f6f6e9;
   color: orange;
   border: solid 2px orange;
@@ -138,6 +138,7 @@ __list-ul-li {
 }
 table {
   width: 100%;
+  letter-spacing: 2px;
 }
 table th {
   /*thに対して*/
@@ -156,13 +157,11 @@ table td {
 .th-bottom {
   width: 72px;
 }
-.check {
-  margin-left: 30px;
-  vertical-align: 1.5rem;
+.tabel-edit {
+  text-align: center;
 }
-.css-br::after {
-  content: "\A";
-  white-space: pre;
+.delbox-wrapper__block {
+  margin: 24px;
 }
 @media screen and (max-width: 900px) {
   .menu {
