@@ -227,6 +227,19 @@ table td {
   }
 }
 
+.time-limit {
+  color: red;
+  font-weight: bold;
+}
+
+.time-over {
+  color: #fff;
+  background-color: #dcdcdc;
+}
+.time-ago {
+  font-weight: bold;
+}
+
 @media screen and (max-width: 900px) {
   .menu {
     display: block;
