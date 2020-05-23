@@ -57,16 +57,18 @@
         <form method="post" action="{{ route('item.del')}}" name="del">
           @csrf
           <table>
+
             <thead>
               <tr>
                 <th class="th-top" rowspan="2">
                   <div class="delete">
+
                     <input type="submit" class="delete__btn" value="X" onclick="allDel(this);return false;">
                   </div>
                 </th>
                 <!-- <th>画像</th> -->
-                <th colspan="5">名前</th>
-                <th class="th-bottom" class="stock">在庫</th>
+                <th colspan="3">名前</th>
+                <th colspan="3" class="th-bottom" class="stock">在庫</th>
               </tr>
 
               <tr>
@@ -98,12 +100,14 @@
                   <img src="/storage/imgs/noimage.jpg" width="80" height="80" alt="画像">
                 </td>
                 @endif -->
-              <td colspan="5">{{ $item->name }}</td>
-              <td class="stock-show">{{ $item->stock }}個</td>
+              <td colspan="3" class="item-name">{{ $item->name }}</td>
+              <td colspan="3" class="stock-show">{{ $item->stock }}個</td>
 
               <tr>
                 <td>
-                  <input class="cbox" type="checkbox" id="cbox" name="check_ids[]" value="{{ $item->id }}">
+                  <label>
+                    <input class="delbox" type="checkbox" id="cbox" name="check_ids[]" value="{{ $item->id }}">
+                  </label>
                 </td>
                 <td>{{ $item->sell_by_year }}年</td>
                 <td>{{ $item->sell_by_month }}月</td>
@@ -141,34 +145,38 @@
                     } else;
                   </script>
                 </td>
-
-
-
         </form>
 
         <td class="item-show">
-
           <form method="get" action="{{route('item.show', ['id' =>$item->id])}}">
             <button type="submit" class="item-show__btn">
               ＞
             </button>
-
           </form>
-
         </td>
+<<<<<<< Updated upstream
+        </tr>
+=======
+>>>>>>> Stashed changes
+
         <tr>
           <td colspan="7">
             <div class="line"></div>
           </td>
         </tr>
+
+<<<<<<< Updated upstream
+
+=======
         </tr>
         </tr>
+>>>>>>> Stashed changes
         @endforeach
         </tbody>
         </table>
+
         <div class="delete">
           <input type="submit" class="delete__btn" value="X" onclick="allDel(this);return false;">
-
         </div>
         {{$items->links()}}
       </div>
