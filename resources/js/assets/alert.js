@@ -8,7 +8,7 @@ deletePost =
 
 allDel =
     function allDel() {
-        var check = document.getElementsByClassName("delbox");
+        var check = document.getElementsByClassName("delbox-wrapper__block-checkbox");
         var array = Array.prototype.slice.call(check);
 
         for (let i = 0; i < array.length; i += 1) {
