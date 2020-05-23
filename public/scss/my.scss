@@ -182,7 +182,9 @@
 // .stock-show {
 //   text-align: right;
 // }
-
+.item-name {
+  font-weight: bold;
+}
 .stock {
   white-space: pre;
   // padding-right: 10px;
@@ -214,7 +216,7 @@ table td {
   width: 72px;
 }
 
-.cbox {
+.check {
   margin-left: 30px;
   vertical-align: 1.5rem;
 }

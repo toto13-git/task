@@ -57,10 +57,12 @@
         <form method="post" action="{{ route('item.del')}}" name="del">
           @csrf
           <table>
+
             <thead>
               <tr>
                 <th class="th-top" rowspan="2">
                   <div class="delete">
+
                     <input type="submit" class="delete__btn" value="X" onclick="allDel(this);return false;">
                   </div>
                 </th>
@@ -103,7 +105,9 @@
 
               <tr>
                 <td>
-                  <input class="cbox" type="checkbox" id="cbox" name="check_ids[]" value="{{ $item->id }}">
+                  <label>
+                    <input class="delbox" type="checkbox" id="cbox" name="check_ids[]" value="{{ $item->id }}">
+                  </label>
                 </td>
                 <td>{{ $item->sell_by_year }}年</td>
                 <td>{{ $item->sell_by_month }}月</td>
@@ -141,34 +145,38 @@
                     } else;
                   </script>
                 </td>
-
-
-
         </form>
 
         <td class="item-show">
-
           <form method="get" action="{{route('item.show', ['id' =>$item->id])}}">
             <button type="submit" class="item-show__btn">
               ＞
             </button>
-
           </form>
-
         </td>
+<<<<<<< Updated upstream
+        </tr>
+=======
+>>>>>>> Stashed changes
+
         <tr>
           <td colspan="7">
             <div class="line"></div>
           </td>
         </tr>
+
+<<<<<<< Updated upstream
+
+=======
         </tr>
         </tr>
+>>>>>>> Stashed changes
         @endforeach
         </tbody>
         </table>
+
         <div class="delete">
           <input type="submit" class="delete__btn" value="X" onclick="allDel(this);return false;">
-
         </div>
         {{$items->links()}}
       </div>
