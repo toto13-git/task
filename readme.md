@@ -6,8 +6,8 @@
 
 https://bitiku.herokuapp.com/
 
-E-Mail_Address:
-Password:
+- E-Mail_Address:bbb@bbb.com
+- Password:12345678
 
 ## アプリケーションの説明
 
