@@ -26,6 +26,10 @@ https://bitiku.herokuapp.com/
 - 画像の投稿。その画像をリストで確認ができるようにしたいです。
 - 賞味期限が近いもの順に並び替えれるようにしたいです。
 
+## DB設計
+
+![er図](https://user-images.githubusercontent.com/56705907/82758348-f680ce00-9e20-11ea-9f4c-d25254735acc.png)
+
 ## 使い方
 
 1. ログイン後に/user/show/idに飛びます。
