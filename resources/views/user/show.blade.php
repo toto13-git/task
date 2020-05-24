@@ -45,7 +45,7 @@
 
           <div class="menu__search">
             <form method="get" action="{{route('user.show', ['id' => $user])}}">
-              <input class="menu__search-area" name="search" type="search" placeholder="商品名を検索" aria-label="Search">
+              <input class="menu__search-area" name="search" type="search" placeholder="名前を検索" aria-label="Search">
               <button class="menu__search-btn" type="submit">検索</button>
             </form>
           </div>
