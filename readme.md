@@ -30,6 +30,10 @@ https://bitiku.herokuapp.com/
 
 ![er図](https://user-images.githubusercontent.com/56705907/82758348-f680ce00-9e20-11ea-9f4c-d25254735acc.png)
 
+## デモ
+- 一覧ページ
+![screencapture-bitiku-herokuapp-user-show-21-2020-05-25-00_58_27](https://user-images.githubusercontent.com/56705907/82758699-11544200-9e23-11ea-8ad4-8c67b6c78762.png)
+
 ## 使い方
 
 1. ログイン後に/user/show/idに飛びます。
@@ -52,6 +56,7 @@ https://bitiku.herokuapp.com/
 - JavaScript
 - html
 - scss
+- bootstrap 4.0.0
  
 ## デプロイ
 Heroku
