@@ -47,11 +47,11 @@ https://bitiku.herokuapp.com/
 
 ## ツール・ライブラリの名前
 
-Laravel 5.8.38
-PHP 7.1.23
-JavaScript
-html
-scss
+- Laravel 5.8.38
+- PHP 7.1.23
+- JavaScript
+- html
+- scss
  
 ## デプロイ
 Heroku
