@@ -25,39 +25,67 @@
           </div>
           @endif
 
-          <button type="submit" class="btn btn-primary" onClick="history.back()">
-            戻る
-          </button>
-          <form method="post" action="{{route('item.store')}}" enctype="multipart/form-data">
-            @csrf
-            商品名
-            <input type="text" name="name" value={{ old('name') }}>
-            <br>
-            賞味期限
-            <input type="text" name="sell_by_year" value={{ old('sell_by_year') }}>年
-            <br>
-            <input type="text" name="sell_by_month" value={{ old('sell_by_month') }}>月
-            <br>
-            <input type="text" name="sell_by_day" value={{ old('sell_by_day') }}>日
-            <br>
-            在庫
-            <input type=text name="stock" value={{ old('stock') }}>個
-            <br>
-            カテゴリー
-            <select name="category">
-              <option value="">選択してください</option>
-              <option value="1" @if(old('category')=='1' ) selected @endif>飲料水など</option>
-              <option value="2" @if(old('category')=='2' ) selected @endif>保存食など</option>
-              <option value="3" @if(old('category')=='3' ) selected @endif>その他</option>
-            </select>
-            <br>
-            メモ
-            <textarea name="memo" value={{ old('memo') }}></textarea>
-            <br>
-            画像
-            <input type="file" name="image" alt="画像">
-            <input class="btn btn-info" type="submit" value="登録する">
-          </form>
+          <div class="create-item">
+            <ul class="create-item__ul">
+              <li>
+                <button class="create-item__ul-btn-back" type="submit" onClick="history.back()">
+                  ＜戻る
+                </button>
+              </li>
+              <form method="post" action="{{route('item.store')}}" enctype="multipart/form-data">
+                @csrf
+
+                <li class="create-item__ul-name">
+                  名前
+                </li>
+                <li>
+                  <input type="text" name="name" placeholder="10字まで入力できます" value={{ old('name') }}>
+                </li>
+
+                <li class="create-item__ul-name">
+                  賞味期限
+                </li>
+                <li>
+                  <input class="create-item__ul-input" type="text" name="sell_by_year" value={{ old('sell_by_year') }}>年
+                  <input class="create-item__ul-input-min" type="text" name="sell_by_month" value={{ old('sell_by_month') }}>月
+                  <input class="create-item__ul-input-min" type="text" name="sell_by_day" value={{ old('sell_by_day') }}>日
+                </li>
+
+                <li class="create-item__ul-name">
+                  在庫
+                </li>
+                <li>
+                  <input class="create-item__ul-input" type=text name="stock" value={{ old('stock') }}>個
+                </li>
+
+                <li class="create-item__ul-name">
+                  カテゴリー
+                </li>
+                <li>
+                  <select name="category">
+                    <option value="">選択してください</option>
+                    <option value="1" @if(old('category')=='1' ) selected @endif>飲料水など</option>
+                    <option value="2" @if(old('category')=='2' ) selected @endif>保存食など</option>
+                    <option value="3" @if(old('category')=='3' ) selected @endif>その他</option>
+                  </select>
+                </li>
+
+                <li class="create-item__ul-name">
+                  メモ
+                </li>
+
+                <li>
+                  <textarea class="create-item__ul-textarea" name="memo" placeholder="200字まで入力できます" value={{ old('memo') }}></textarea>
+                </li>
+
+                <!-- <li>画像</li>
+              <li><input type="file" name="image" alt="画像"></li> -->
+                <li>
+                  <input class="create-item__ul-btn-create" type="submit" value="登録">
+                </li>
+              </form>
+            </ul>
+          </div>
         </div>
       </div>
     </div>

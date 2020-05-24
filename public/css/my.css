@@ -133,23 +133,20 @@ __list-ul-li {
   white-space: pre;
 }
 .line {
-  border: solid 0.5px #ccc;
+  border: solid 0.5px #ffdead;
   margin-bottom: 8px;
 }
 table {
   width: 100%;
-  letter-spacing: 2px;
 }
 table th {
-  /*thに対して*/
   color: #ff9800;
-  /*文字色*/
   background: #fff5e5;
-  /*背景色*/
+  letter-spacing: 2px;
 }
 table td {
-  /*tdに対して*/
   color: gray;
+  letter-spacing: 1px;
 }
 .th-top {
   width: 50px;
