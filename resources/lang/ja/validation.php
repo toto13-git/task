@@ -128,7 +128,7 @@ return [
     'sell_by_year' => '年',
     'sell_by_month' => '月',
     'sell_by_day' => '日',
-    'name' => '商品名',
+    'name' => '名前',
     'memo' => 'メモ',
     'image' => '画像',
     'stock' => '在庫',

@@ -1,0 +1,55 @@
+.back-btn {
+  white-space: nowrap;
+  min-width: 48px;
+  font-size: 1rem;
+  display: flex;
+  padding: 0.3rem 0.5rem 0.1rem 0.5rem;
+  text-decoration: none;
+  color: #f6f6e9;
+  background: #4169e1;
+  border: solid 2px #4169e1;
+  box-sizing: border-box;
+  border-radius: 5px;
+  letter-spacing: 0.3rem;
+  transition: 0.3s;
+
+  &:hover {
+    background: #f6f6e9;
+    color: #4169e1;
+    border: solid 2px #4169e1;
+  }
+}
+
+.item-table {
+  margin: 8px 0;
+  &__th {
+    border-bottom: solid 0.5px #ffdead;
+    width: 100px;
+    padding: 8px 0 0 8px;
+  }
+  &__td {
+    padding: 8px 0 0 8px;
+  }
+}
+
+.edit-btn {
+  white-space: nowrap;
+  min-width: 48px;
+  font-size: 1rem;
+  display: flex;
+  padding: 0.3rem 0.5rem 0.1rem 0.5rem;
+  text-decoration: none;
+  color: #f6f6e9;
+  background: orange;
+  border: solid 2px orange;
+  box-sizing: border-box;
+  border-radius: 5px;
+  letter-spacing: 0.3rem;
+  transition: 0.3s;
+
+  &:hover {
+    background: #f6f6e9;
+    color: orange;
+    border: solid 2px orange;
+  }
+}
