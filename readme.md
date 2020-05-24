@@ -59,4 +59,4 @@ https://bitiku.herokuapp.com/
 - bootstrap 4.0.0
  
 ## デプロイ
-Heroku
+- Heroku
