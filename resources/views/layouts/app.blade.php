@@ -20,7 +20,7 @@
 
   <!-- Styles -->
   <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-  <link href="{{ asset('css/my.css') }}" rel="stylesheet">
+  <link href="{{ asset('css/user_show.css') }}" rel="stylesheet">
   <link href="{{ asset('css/item_create_edti.css') }}" rel="stylesheet">
   <link href="{{ asset('css/item_show.css') }}" rel="stylesheet">
 </head>

@@ -53,10 +53,10 @@
 
         <form method="post" action="{{ route('item.del')}}" name="del">
           @csrf
-          <table>
+          <table class="table-list">
             <thead>
               <tr>
-                <th class="th-top" rowspan="2">
+                <th class="table-list__th-top" rowspan="2">
                   <div class="delete">
                     <input type="submit" class="delete__btn" value="X" onclick="allDel(this);return false;">
                   </div>
@@ -64,12 +64,12 @@
                 <!-- 今後追加予定の画像投稿機能 -->
                 <!-- <th>画像</th> -->
                 <th colspan="3">名前</th>
-                <th colspan="4" class="th-bottom" class="stock">在庫</th>
+                <th colspan="4" class="table-list__th-bottom" class="stock">在庫</th>
               </tr>
               <tr>
                 <th colspan="3">賞味期限</th>
                 <th colspan="3">残り日数</th>
-                <th class="tabel-edit"><span class="css-br">詳細</span> 編集</th>
+                <th class="table-list__tabel-edit"><span class="css-br">詳細</span> 編集</th>
               </tr>
               <tr>
                 <td colspan="8">
@@ -78,7 +78,7 @@
               </tr>
             </thead>
             @foreach ($items as $item)
-            <div id="w">
+            <div>
               <tbody>
                 <tr>
                   <td class="delbox-wrapper" rowspan="2">
@@ -97,7 +97,7 @@
                 </td>
                 @endif -->
                   <td colspan="3" class="item-name">{{ $item->name }}</td>
-                  <td colspan="4" class="stock-show">{{ $item->stock }}個</td>
+                  <td colspan="3" class="stock-show">{{ $item->stock }}個</td>
                 </tr>
                 <tr>
 
