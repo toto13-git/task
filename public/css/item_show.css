@@ -1,22 +1,25 @@
 .back-btn {
   white-space: nowrap;
   min-width: 48px;
-  font-size: 1rem;
+  font-size: 16px;
   display: flex;
-  padding: 0.3rem 0.5rem 0.1rem 0.5rem;
+  padding: 4px 8px 2px;
   text-decoration: none;
   color: #f6f6e9;
   background: #4169e1;
   border: solid 2px #4169e1;
   box-sizing: border-box;
   border-radius: 5px;
-  letter-spacing: 0.3rem;
+  letter-spacing: 5px;
   transition: 0.3s;
 }
 .back-btn:hover {
   background: #f6f6e9;
   color: #4169e1;
   border: solid 2px #4169e1;
+}
+.back-btn:focus {
+  outline: 0;
 }
 .item-table {
   margin: 8px 0;
@@ -32,20 +35,23 @@
 .edit-btn {
   white-space: nowrap;
   min-width: 48px;
-  font-size: 1rem;
+  font-size: 16px;
   display: flex;
-  padding: 0.3rem 0.5rem 0.1rem 0.5rem;
+  padding: 4px 8px 2px;
   text-decoration: none;
   color: #f6f6e9;
   background: orange;
   border: solid 2px orange;
   box-sizing: border-box;
   border-radius: 5px;
-  letter-spacing: 0.3rem;
+  letter-spacing: 5px;
   transition: 0.3s;
 }
 .edit-btn:hover {
   background: #f6f6e9;
   color: orange;
   border: solid 2px orange;
+}
+.edit-btn:focus {
+  outline: 0;
 }

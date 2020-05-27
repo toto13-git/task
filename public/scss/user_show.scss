@@ -1,42 +1,30 @@
-// html {
-//    font-size: 62.5%;
-//   }
-
-.noimage {
-  background-image: url("/storage/imgs/noimage.jpg");
-  width: 80%;
-  height: 80%;
-  object-fit: contain;
-}
-
-// .pagination {
-//   margin-top: 1rem;
-// }
-
-// .btn-danger {
-//   margin: 1rem 0 1rem 0;
+//今後画像実装予定の画像がない場合はnoimage画像を表示する設定
+// .noimage {
+//   background-image: url("/storage/imgs/noimage.jpg");
+//   width: 80%;
+//   height: 80%;
+//   object-fit: contain;
 // }
 
 .menu {
   display: flex;
-  height: 4rem;
+  height: 64px;
 
   &__register,
   &__list {
-    // margin: auto 0;
     &-btn {
       white-space: nowrap;
       min-width: 48px;
-      font-size: 1rem;
+      font-size: 16px;
       display: flex;
-      padding: 0.3rem 0.7rem 0.3rem 1rem;
+      padding: 5px 12px 4px 18px;
       text-decoration: none;
       color: #f6f6e9;
       background: #00a40f;
       border: solid 2px #00a40f;
       box-sizing: border-box;
       border-radius: 5px;
-      letter-spacing: 0.3rem;
+      letter-spacing: 5px;
       transition: 0.3s;
 
       &:hover {
@@ -44,27 +32,25 @@
         color: #00a40f;
         border: solid 2px #00a40f;
       }
+      &:focus {
+        outline:0;
+      }
     }
   }
-
   &__list {
     margin: 0 10px;
   }
-
   &__search {
-    // margin-left: auto;
-
     &-btn {
-      font-size: 1rem;
-      // display: inline-block;
-      padding: 0.3rem 0.7rem 0.3rem 1rem;
+      font-size: 16px;
+      padding: 5px 12px 5px 16px;
       text-decoration: none;
       color: #f6f6e9;
       background: #00a40f;
       border: solid 2px #00a40f;
       box-sizing: border-box;
-      border-radius: 0 2rem 2rem 0;
-      letter-spacing: 0.3rem;
+      border-radius: 0 32px 32px 0;
+      letter-spacing: 5px;
       transition: 0.3s;
 
       &:hover {
@@ -72,13 +58,15 @@
         color: #00a40f;
         border: solid 2px #00a40f;
       }
+      &:focus {
+        outline:0;
+      }
     }
     &-area {
-      font-size: 1rem;
+      font-size: 16px;
       margin-right: -4px;
-      // display: inline-block;
-      padding: 0.3rem 0.7rem 0.3rem 1rem;
-      border-radius: 2rem 0 0 2rem;
+      padding: 5px 12px 5px 16px;
+      border-radius: 32px 0 0 32px;
       border: 2px solid #00a40f;
       border-right-style: none;
       outline: 0; /* 入力の薄い枠を非表示  */
@@ -89,32 +77,19 @@
   }
 }
 
-// .info {
-//   // border: solid 1px;
-
-//   &__wrapper {
-//     // border: solid 1px;
-//     display: inline-block;
-
 .delete {
   display: inline-block;
-
-  // border: solid 1px;
-  // width: 3rem;
 
   &__btn {
     display: inline-block;
     vertical-align: middle;
-    font-size: 1rem;
-    // text-align: center;
+    font-size: 16px;
     font-weight: bold;
-    margin: 0.5rem;
-    // margin-right: -3px;
+    margin: 8px;
     background-color: #ee0028;
     color: #fff;
-    // letter-spacing: 0.3rem;
-    padding: 0.3rem 0.8rem;
-    border-radius: 2rem;
+    padding: 5px 13px;
+    border-radius: 32px;
     border: 2px solid #ee0028;
     box-sizing: border-box;
     border-radius: 5px;
@@ -127,28 +102,22 @@
     }
   }
 }
-// }
+
 &__list {
-  // border: solid 1px;
   width: 500px;
   display: inline-block;
-  // margin: -200px 0 0 0;
   margin-bottom: 0;
   &-ul {
-    // margin: 10px;
     list-style: none;
     font-weight: bold;
-    letter-spacing: 0.2rem;
-    // border: solid 1px;
+    letter-spacing: 3px;
     padding: 0;
     &-li {
       margin: 0;
       display: inline-block;
-      // border: solid 1px;
     }
   }
 }
-// }
 
 .item-show-wrapper {
   display: flex;
@@ -156,16 +125,16 @@
     margin: 0 auto;
     &-btn {
       width: 100%;
-      font-size: 1rem;
+      font-size: 16px;
       display: flex;
-      padding: 0.3rem 0.7rem 0.3rem 1rem;
+      padding: 5px 10px 5px 16px;
       text-decoration: none;
       color: #f6f6e9;
       background: orange;
       border: solid 2px orange;
       box-sizing: border-box;
       border-radius: 5px;
-      letter-spacing: 0.3rem;
+      letter-spacing: 5px;
       transition: 0.3s;
 
       &:hover {
@@ -173,18 +142,18 @@
         color: orange;
         border: solid 2px orange;
       }
+      &:focus {
+        outline:0;
+      }
     }
   }
 }
-// .stock-show {
-//   text-align: right;
-// }
+
 .item-name {
   font-weight: bold;
 }
 .stock {
   white-space: pre;
-  // padding-right: 10px;
 }
 
 .line {
@@ -192,38 +161,36 @@
   margin-bottom: 8px;
 }
 
-table {
+.table-list {
   width: 100%;
-}
-table th {
+
+  th {
   color: #ff9800;
   background: #fff5e5;
   letter-spacing: 2px;
-}
+  }
 
-table td {
-  color: gray;
-  letter-spacing: 1px;
-}
+  td {
+    color: gray;
+    letter-spacing: 1px;
+  }
 
-.th-top {
-  width: 50px;
-}
+  &__th-top {
+    width: 50px;
+  }
 
-.th-bottom {
-  width: 72px;
-}
+  &__th-bottom {
+    width: 72px;
+  }
 
-.tabel-edit {
-  text-align: center;
+  &__tabel-edit {
+    text-align: center;
+  }
 }
 
 .delbox-wrapper {
   &__block {
-    margin: 24px;
-
-    &-checkbox {
-    }
+    margin: 24px 24px 24px 22px;
   }
 }
 
@@ -231,7 +198,6 @@ table td {
   color: red;
   font-weight: bold;
 }
-
 .time-over {
   color: #fff;
   background-color: #dcdcdc;

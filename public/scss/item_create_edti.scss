@@ -12,22 +12,25 @@
     &-btn-back {
       white-space: nowrap;
       min-width: 48px;
-      font-size: 1rem;
+      font-size: 16px;
       display: flex;
-      padding: 0.3rem 0.5rem 0.1rem 0.5rem;
+      padding: 4px 8px 2px;
       text-decoration: none;
+      box-sizing: border-box;
+      border-radius: 5px;
+      letter-spacing: 5px;
+      transition: 0.3s;
       color: #f6f6e9;
       background: #4169e1;
       border: solid 2px #4169e1;
-      box-sizing: border-box;
-      border-radius: 5px;
-      letter-spacing: 0.3rem;
-      transition: 0.3s;
 
       &:hover {
         background: #f6f6e9;
         color: #4169e1;
         border: solid 2px #4169e1;
+      }
+      &:focus {
+        outline:0;
       }
     }
 
@@ -44,18 +47,19 @@
     &-btn-create {
       white-space: nowrap;
       min-width: 48px;
-      font-size: 1rem;
+      font-size: 16px;
       font-weight: bold;
       display: flex;
-      padding: 0.3rem 0.7rem 0.3rem 1rem;
+      padding: 4px 3px 2px 12px;
       text-decoration: none;
+      box-sizing: border-box;
+      border-radius: 5px;
+      letter-spacing: 5px;
+      outline: 0; /* 入力の薄い枠を非表示  */
+      transition: 0.3s;
       color: #f6f6e9;
       background: #00a40f;
       border: solid 2px #00a40f;
-      box-sizing: border-box;
-      border-radius: 5px;
-      letter-spacing: 0.3rem;
-      transition: 0.3s;
 
       &:hover {
         background: #f6f6e9;
@@ -66,18 +70,17 @@
     &-btn-del {
       display: inline-block;
       vertical-align: middle;
-      font-size: 1rem;
-      // text-align: center;
-      margin-top: 0.5rem;
-      // margin-right: -3px;
+      font-size: 16px;
+      margin-top: 8px;
       background-color: #ee0028;
       color: #fff;
-      // letter-spacing: 0.3rem;
-      padding: 0.3rem 0.8rem;
-      border-radius: 2rem;
+      padding: 4px 6px 3px;
+      border-radius: 16px;
       border: 2px solid #ee0028;
       box-sizing: border-box;
       border-radius: 5px;
+      letter-spacing: 5px;
+      text-indent: 6px;
       outline: 0; /* 入力の薄い枠を非表示  */
       transition: 0.3s;
       &:hover {
