@@ -3,23 +3,23 @@
   height: 64px;
 }
 .menu__register-btn, .menu__list-btn {
+  font-size: 16px;
   white-space: nowrap;
   min-width: 48px;
-  font-size: 16px;
   display: flex;
-  padding: 5px 12px 4px 18px;
   text-decoration: none;
-  color: #f6f6e9;
-  background: #00a40f;
-  border: solid 2px #00a40f;
   box-sizing: border-box;
   border-radius: 5px;
   letter-spacing: 5px;
   transition: 0.3s;
+  color: #f6f6e9;
+  background: #00a40f;
+  border: solid 2px #00a40f;
+  padding: 5px 12px 4px 18px;
 }
 .menu__register-btn:hover, .menu__list-btn:hover {
-  background: #f6f6e9;
   color: #00a40f;
+  background: #f6f6e9;
   border: solid 2px #00a40f;
 }
 .menu__register-btn:focus, .menu__list-btn:focus {
@@ -41,8 +41,8 @@
   transition: 0.3s;
 }
 .menu__search-btn:hover {
-  background: #f6f6e9;
   color: #00a40f;
+  background: #f6f6e9;
   border: solid 2px #00a40f;
 }
 .menu__search-btn:focus {
@@ -65,25 +65,24 @@
   display: inline-block;
 }
 .delete__btn {
-  display: inline-block;
-  vertical-align: middle;
   font-size: 16px;
   font-weight: bold;
   margin: 8px;
-  background-color: #ee0028;
-  color: #fff;
   padding: 5px 13px;
-  border-radius: 32px;
+  display: inline-block;
+  vertical-align: middle;
+  color: #f6f6e9;
+  background-color: #ee0028;
   border: 2px solid #ee0028;
-  box-sizing: border-box;
   border-radius: 5px;
+  box-sizing: border-box;
   outline: 0;
   /* 入力の薄い枠を非表示  */
   transition: 0.3s;
 }
 .delete__btn:hover {
-  background: #f6f6e9;
   color: #ee0028;
+  background: #f6f6e9;
   border: solid 2px #ee0028;
 }
 __list {
@@ -108,23 +107,23 @@ __list-ul-li {
   margin: 0 auto;
 }
 .item-show-wrapper__block-btn {
+  border-radius: 5px;
+  letter-spacing: 5px;
+  transition: 0.3s;
   width: 100%;
   font-size: 16px;
   display: flex;
   padding: 5px 10px 5px 16px;
   text-decoration: none;
   color: #f6f6e9;
-  background: orange;
-  border: solid 2px orange;
+  background: #ffa500;
+  border: solid 2px #ffa500;
   box-sizing: border-box;
-  border-radius: 5px;
-  letter-spacing: 5px;
-  transition: 0.3s;
 }
 .item-show-wrapper__block-btn:hover {
+  color: #ffa500;
   background: #f6f6e9;
-  color: orange;
-  border: solid 2px orange;
+  border: solid 2px #ffa500;
 }
 .item-show-wrapper__block-btn:focus {
   outline: 0;
@@ -148,7 +147,7 @@ __list-ul-li {
   letter-spacing: 2px;
 }
 .table-list td {
-  color: gray;
+  color: #808080;
   letter-spacing: 1px;
 }
 .table-list__th-top {
@@ -164,7 +163,7 @@ __list-ul-li {
   margin: 24px 24px 24px 22px;
 }
 .time-limit {
-  color: red;
+  color: #ee0028;
   font-weight: bold;
 }
 .time-over {

@@ -1,33 +1,52 @@
+@import "variables";
+@import "palette";
+@import "colors";
+
 .create-item,
 .edit-item {
   &__ul {
     margin-left: -40px;
     list-style: none;
     font-weight: bold;
-    color: gray;
+    color: $palette-gray;
     &-name {
       margin-top: 8px;
     }
+    &-navbar-brand{
+      @include button;
+      @include button-style;
+      width: 144px; 
+      padding: 4px 8px 2px;
+      margin-bottom: 8px;
+      font-weight: normal;
+      color: $color-back-button-color;
+      background: $color-back-button-background;
+      border: solid 2px $color-back-button-border;
+    
+      &:hover {
+        text-decoration: none;
+        color: $color-back-button-color-hover;
+        background: $color-back-button-background-hover;
+        border: solid 2px $color-back-button-border-hover;
+      }
+      &:focus {
+        outline:0;
+      }
+    }
+
 
     &-btn-back {
-      white-space: nowrap;
-      min-width: 48px;
-      font-size: 16px;
-      display: flex;
+      @include button;
+      @include button-style;
+      color: $color-back-button-color;
+      background: $color-back-button-background;
+      border: solid 2px $color-back-button-border;
       padding: 4px 8px 2px;
-      text-decoration: none;
-      box-sizing: border-box;
-      border-radius: 5px;
-      letter-spacing: 5px;
-      transition: 0.3s;
-      color: #f6f6e9;
-      background: #4169e1;
-      border: solid 2px #4169e1;
 
       &:hover {
-        background: #f6f6e9;
-        color: #4169e1;
-        border: solid 2px #4169e1;
+        color: $color-back-button-color-hover;
+        background: $color-back-button-background-hover;
+        border: solid 2px $color-back-button-border-hover;
       }
       &:focus {
         outline:0;
@@ -45,48 +64,39 @@
       height: 190px;
     }
     &-btn-create {
-      white-space: nowrap;
-      min-width: 48px;
-      font-size: 16px;
-      font-weight: bold;
-      display: flex;
-      padding: 4px 3px 2px 12px;
-      text-decoration: none;
-      box-sizing: border-box;
-      border-radius: 5px;
-      letter-spacing: 5px;
+      @include button;
+      @include  button-style;
       outline: 0; /* 入力の薄い枠を非表示  */
-      transition: 0.3s;
-      color: #f6f6e9;
-      background: #00a40f;
-      border: solid 2px #00a40f;
+      color: $color-create-item-button-color;
+      background: $color-create-item-button-background;
+      border: solid 2px $color-create-item-button-border;
+      font-weight: bold; 
+      padding: 4px 3px 2px 12px;
 
       &:hover {
-        background: #f6f6e9;
-        color: #00a40f;
-        border: solid 2px #00a40f;
+        color: $color-create-item-button-color-hover;
+        background: $color-create-item-button-background-hover;
+        border: solid 2px $color-create-item-button-border-hover;
       }
     }
     &-btn-del {
+      @include  button-style;
+      font-size: $base-font-size;
+      margin-top: 8px;
+      padding: 4px 6px 3px;
+      color: $color-delete-button-color;
+      background-color: $color-delete-button-background;
+      border: 2px solid $color-delete-button-border;
       display: inline-block;
       vertical-align: middle;
-      font-size: 16px;
-      margin-top: 8px;
-      background-color: #ee0028;
-      color: #fff;
-      padding: 4px 6px 3px;
-      border-radius: 16px;
-      border: 2px solid #ee0028;
       box-sizing: border-box;
-      border-radius: 5px;
-      letter-spacing: 5px;
       text-indent: 6px;
       outline: 0; /* 入力の薄い枠を非表示  */
-      transition: 0.3s;
+
       &:hover {
-        background: #f6f6e9;
-        color: #ee0028;
-        border: solid 2px #ee0028;
+        color: $color-delete-button-color-hover;
+        background: $color-delete-button-background-hover;
+        border: solid 2px $color-delete-button-border-hover;
         text-decoration: none;
       }
     }

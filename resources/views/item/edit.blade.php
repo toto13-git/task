@@ -28,7 +28,7 @@
             <ul class="edit-item__ul">
               <li>
                 <!-- 備蓄リスト戻る -->
-                <a class="navbar-brand" href="{{ url('user/show', ['id' => $user]) }}">マイページTopへ</a>
+                <a class="edit-item__ul-navbar-brand" href="{{ url('user/show', ['id' => $user]) }}">＜備蓄リスト</a>
               </li>
               <li>
                 <!-- 戻るを押したらマイページへ戻る -->
