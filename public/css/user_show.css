@@ -210,6 +210,10 @@
   font-weight: bold;
 }
 
+.pagination {
+  justify-content: center;
+}
+
 @media screen and (max-width: 900px) {
   .menu {
     display: block;
