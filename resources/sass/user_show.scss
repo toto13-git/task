@@ -98,22 +98,6 @@
   }
 }
 
-// &__list {
-//   width: 500px;
-//   display: inline-block;
-//   margin-bottom: 0;
-//   &-ul {
-//     list-style: none;
-//     font-weight: bold;
-//     letter-spacing: 3px;
-//     padding: 0;
-//     &-li {
-//       margin: 0;
-//       display: inline-block;
-//     }
-//   }
-// }
-
 .item-show-wrapper {
   display: flex;
   &__block {
@@ -197,6 +181,10 @@
 }
 .time-ago {
   font-weight: bold;
+}
+
+.page{
+  margin: 0 auto;
 }
 
 @media screen and (max-width: 900px) {
