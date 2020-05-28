@@ -2,17 +2,43 @@
   margin-left: -40px;
   list-style: none;
   font-weight: bold;
-  color: gray;
+  color: #808080;
 }
 .create-item__ul-name, .edit-item__ul-name {
   margin-top: 8px;
 }
-.create-item__ul-btn-back, .edit-item__ul-btn-back {
+.create-item__ul-navbar-brand, .edit-item__ul-navbar-brand {
+  font-size: 16px;
   white-space: nowrap;
   min-width: 48px;
-  font-size: 16px;
   display: flex;
+  text-decoration: none;
+  box-sizing: border-box;
+  border-radius: 5px;
+  letter-spacing: 5px;
+  transition: 0.3s;
+  width: 144px;
+  font-weight: normal;
+  color: #f6f6e9;
+  background: #4169e1;
+  border: solid 2px #4169e1;
   padding: 4px 8px 2px;
+  margin-bottom: 8px;
+}
+.create-item__ul-navbar-brand:hover, .edit-item__ul-navbar-brand:hover {
+  text-decoration: none;
+  color: #4169e1;
+  background: #f6f6e9;
+  border: solid 2px #4169e1;
+}
+.create-item__ul-navbar-brand:focus, .edit-item__ul-navbar-brand:focus {
+  outline: 0;
+}
+.create-item__ul-btn-back, .edit-item__ul-btn-back {
+  font-size: 16px;
+  white-space: nowrap;
+  min-width: 48px;
+  display: flex;
   text-decoration: none;
   box-sizing: border-box;
   border-radius: 5px;
@@ -21,10 +47,11 @@
   color: #f6f6e9;
   background: #4169e1;
   border: solid 2px #4169e1;
+  padding: 4px 8px 2px;
 }
 .create-item__ul-btn-back:hover, .edit-item__ul-btn-back:hover {
-  background: #f6f6e9;
   color: #4169e1;
+  background: #f6f6e9;
   border: solid 2px #4169e1;
 }
 .create-item__ul-btn-back:focus, .edit-item__ul-btn-back:focus {
@@ -41,49 +68,48 @@
   height: 190px;
 }
 .create-item__ul-btn-create, .edit-item__ul-btn-create {
+  font-size: 16px;
   white-space: nowrap;
   min-width: 48px;
-  font-size: 16px;
-  font-weight: bold;
   display: flex;
-  padding: 4px 3px 2px 12px;
   text-decoration: none;
   box-sizing: border-box;
   border-radius: 5px;
   letter-spacing: 5px;
+  transition: 0.3s;
   outline: 0;
   /* 入力の薄い枠を非表示  */
-  transition: 0.3s;
   color: #f6f6e9;
   background: #00a40f;
   border: solid 2px #00a40f;
+  font-weight: bold;
+  padding: 4px 3px 2px 12px;
 }
 .create-item__ul-btn-create:hover, .edit-item__ul-btn-create:hover {
-  background: #f6f6e9;
   color: #00a40f;
+  background: #f6f6e9;
   border: solid 2px #00a40f;
 }
 .create-item__ul-btn-del, .edit-item__ul-btn-del {
-  display: inline-block;
-  vertical-align: middle;
-  font-size: 16px;
-  margin-top: 8px;
-  background-color: #ee0028;
-  color: #fff;
-  padding: 4px 6px 3px;
-  border-radius: 16px;
-  border: 2px solid #ee0028;
-  box-sizing: border-box;
   border-radius: 5px;
   letter-spacing: 5px;
+  transition: 0.3s;
+  font-size: 16px;
+  margin-top: 8px;
+  padding: 4px 6px 3px;
+  color: #f6f6e9;
+  background-color: #ee0028;
+  border: 2px solid #ee0028;
+  display: inline-block;
+  vertical-align: middle;
+  box-sizing: border-box;
   text-indent: 6px;
   outline: 0;
   /* 入力の薄い枠を非表示  */
-  transition: 0.3s;
 }
 .create-item__ul-btn-del:hover, .edit-item__ul-btn-del:hover {
-  background: #f6f6e9;
   color: #ee0028;
+  background: #f6f6e9;
   border: solid 2px #ee0028;
   text-decoration: none;
 }

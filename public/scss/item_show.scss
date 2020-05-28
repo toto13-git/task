@@ -1,22 +1,19 @@
+@import "variables";
+@import "palette";
+@import "colors";
+
 .back-btn {
-  white-space: nowrap;
-  min-width: 48px;
-  font-size: 16px;
-  display: flex;
+  @include button;
+  @include  button-style;
+  color: $color-back-button-color;
+  background: $color-back-button-background;
+  border: solid 2px $color-back-button-border;
   padding: 4px 8px 2px;
-  text-decoration: none;
-  color: #f6f6e9;
-  background: #4169e1;
-  border: solid 2px #4169e1;
-  box-sizing: border-box;
-  border-radius: 5px;
-  letter-spacing: 5px;
-  transition: 0.3s;
 
   &:hover {
-    background: #f6f6e9;
-    color: #4169e1;
-    border: solid 2px #4169e1;
+    color: $color-back-button-color-hover;
+    background: $color-back-button-background-hover;
+    border: solid 2px $color-back-button-border-hover;
   }
   &:focus {
     outline:0;
@@ -24,9 +21,10 @@
 }
 
 .item-table {
+  color: $color-item-table-color;
   margin: 8px 0;
   &__th {
-    border-bottom: solid 0.5px #ffdead;
+    border-bottom: solid 0.5px $color-item-table-border-bottom;
     width: 100px;
     padding: 8px 0 0 8px;
   }
@@ -36,24 +34,17 @@
 }
 
 .edit-btn {
-  white-space: nowrap;
-  min-width: 48px;
-  font-size: 16px;
-  display: flex;
+  @include button;
+  @include  button-style;
+  color: $color-edit-button-color;
+  background: $color-edit-button-background;
+  border: solid 2px $color-edit-button-border;
   padding: 4px 8px 2px;
-  text-decoration: none;
-  color: #f6f6e9;
-  background: orange;
-  border: solid 2px orange;
-  box-sizing: border-box;
-  border-radius: 5px;
-  letter-spacing: 5px;
-  transition: 0.3s;
-
+  
   &:hover {
-    background: #f6f6e9;
-    color: orange;
-    border: solid 2px orange;
+    color: $color-edit-button-color-hover;
+    background: $color-edit-button-background-hover;
+    border: solid 2px $color-edit-button-border-hover;
   }
   &:focus {
     outline:0;

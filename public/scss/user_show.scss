@@ -6,6 +6,10 @@
 //   object-fit: contain;
 // }
 
+@import "variables";
+@import "palette";
+@import "colors";
+
 .menu {
   display: flex;
   height: 64px;
@@ -13,24 +17,16 @@
   &__register,
   &__list {
     &-btn {
-      white-space: nowrap;
-      min-width: 48px;
-      font-size: 16px;
-      display: flex;
+      @include button;
+      @include  button-style;
+      color: $color-register-button-color;
+      background: $color-register-button-background;
+      border: solid 2px $color-register-button-border;
       padding: 5px 12px 4px 18px;
-      text-decoration: none;
-      color: #f6f6e9;
-      background: #00a40f;
-      border: solid 2px #00a40f;
-      box-sizing: border-box;
-      border-radius: 5px;
-      letter-spacing: 5px;
-      transition: 0.3s;
-
       &:hover {
-        background: #f6f6e9;
-        color: #00a40f;
-        border: solid 2px #00a40f;
+        color: $color-register-button-color-hover;
+        background: $color-register-button-background-hover;
+        border: solid 2px $color-register-button-border-hover;
       }
       &:focus {
         outline:0;
@@ -42,32 +38,32 @@
   }
   &__search {
     &-btn {
-      font-size: 16px;
+      font-size: $base-font-size;
       padding: 5px 12px 5px 16px;
       text-decoration: none;
-      color: #f6f6e9;
-      background: #00a40f;
-      border: solid 2px #00a40f;
+      color: $color-search-button-color;
+      background: $color-search-button-background;
+      border: solid 2px $color-search-button-border;
       box-sizing: border-box;
       border-radius: 0 32px 32px 0;
       letter-spacing: 5px;
       transition: 0.3s;
 
       &:hover {
-        background: #f6f6e9;
-        color: #00a40f;
-        border: solid 2px #00a40f;
+        color: $color-search-button-color-hover;
+        background: $color-search-button-background-hover;
+        border: solid 2px $color-search-button-border-hover;
       }
       &:focus {
         outline:0;
       }
     }
     &-area {
-      font-size: 16px;
+      font-size: $base-font-size;
       margin-right: -4px;
       padding: 5px 12px 5px 16px;
       border-radius: 32px 0 0 32px;
-      border: 2px solid #00a40f;
+      border: 2px solid $color-search-area-border;
       border-right-style: none;
       outline: 0; /* 入力の薄い枠を非表示  */
     }
@@ -81,24 +77,23 @@
   display: inline-block;
 
   &__btn {
-    display: inline-block;
-    vertical-align: middle;
-    font-size: 16px;
+    font-size: $base-font-size;
     font-weight: bold;
     margin: 8px;
-    background-color: #ee0028;
-    color: #fff;
     padding: 5px 13px;
-    border-radius: 32px;
-    border: 2px solid #ee0028;
-    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: middle;
+    color: $color-all-delete-button-color;
+    background-color: $color-all-delete-button-background;
+    border: 2px solid $color-all-delete-button-border;
     border-radius: 5px;
+    box-sizing: border-box;
     outline: 0; /* 入力の薄い枠を非表示  */
     transition: 0.3s;
     &:hover {
-      background: #f6f6e9;
-      color: #ee0028;
-      border: solid 2px #ee0028;
+      color: $color-all-delete-button-color-hover;
+      background: $color-all-delete-button-background-hover;
+      border: solid 2px $color-all-delete-button-border-hover;
     }
   }
 }
@@ -124,23 +119,21 @@
   &__block {
     margin: 0 auto;
     &-btn {
+      @include  button-style;
       width: 100%;
-      font-size: 16px;
+      font-size: $base-font-size;
       display: flex;
       padding: 5px 10px 5px 16px;
       text-decoration: none;
-      color: #f6f6e9;
-      background: orange;
-      border: solid 2px orange;
+      color: $color-show-button-color;
+      background: $color-show-button-background;
+      border: solid 2px $color-show-button-border;
       box-sizing: border-box;
-      border-radius: 5px;
-      letter-spacing: 5px;
-      transition: 0.3s;
 
       &:hover {
-        background: #f6f6e9;
-        color: orange;
-        border: solid 2px orange;
+        color: $color-show-button-color-hover;
+        background: $color-show-button-background-hover;
+        border: solid 2px $color-show-button-border-hover;
       }
       &:focus {
         outline:0;
@@ -157,7 +150,7 @@
 }
 
 .line {
-  border: solid 0.5px #ffdead;
+  border: solid 0.5px $color-line;
   margin-bottom: 8px;
 }
 
@@ -165,13 +158,13 @@
   width: 100%;
 
   th {
-  color: #ff9800;
-  background: #fff5e5;
+  color: $color-user-show-table-th-color;
+  background: $color-user-show-table-th-background;
   letter-spacing: 2px;
   }
 
   td {
-    color: gray;
+    color:  $palette-gray;
     letter-spacing: 1px;
   }
 
@@ -195,12 +188,12 @@
 }
 
 .time-limit {
-  color: red;
+  color: $color-time-limit;
   font-weight: bold;
 }
 .time-over {
-  color: #fff;
-  background-color: #dcdcdc;
+  color: $color-time-over-color;
+  background-color: $palette-gainsboro;
 }
 .time-ago {
   font-weight: bold;
