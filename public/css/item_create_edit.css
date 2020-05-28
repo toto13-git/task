@@ -1,0 +1,147 @@
+@charset "UTF-8";
+
+.create-item__ul,
+.edit-item__ul {
+  margin-left: -40px;
+  list-style: none;
+  font-weight: bold;
+  color: #808080;
+}
+
+.create-item__ul-name,
+.edit-item__ul-name {
+  margin-top: 8px;
+}
+
+.create-item__ul-navbar-brand,
+.edit-item__ul-navbar-brand {
+  font-size: 16px;
+  white-space: nowrap;
+  min-width: 48px;
+  display: flex;
+  text-decoration: none;
+  box-sizing: border-box;
+  border-radius: 5px;
+  letter-spacing: 5px;
+  transition: 0.3s;
+  width: 144px;
+  padding: 4px 8px 2px;
+  margin-bottom: 8px;
+  font-weight: normal;
+  color: #f6f6e9;
+  background: #4169e1;
+  border: solid 2px #4169e1;
+}
+
+.create-item__ul-navbar-brand:hover,
+.edit-item__ul-navbar-brand:hover {
+  text-decoration: none;
+  color: #4169e1;
+  background: #f6f6e9;
+  border: solid 2px #4169e1;
+}
+
+.create-item__ul-navbar-brand:focus,
+.edit-item__ul-navbar-brand:focus {
+  outline: 0;
+}
+
+.create-item__ul-btn-back,
+.edit-item__ul-btn-back {
+  font-size: 16px;
+  white-space: nowrap;
+  min-width: 48px;
+  display: flex;
+  text-decoration: none;
+  box-sizing: border-box;
+  border-radius: 5px;
+  letter-spacing: 5px;
+  transition: 0.3s;
+  color: #f6f6e9;
+  background: #4169e1;
+  border: solid 2px #4169e1;
+  padding: 4px 8px 2px;
+}
+
+.create-item__ul-btn-back:hover,
+.edit-item__ul-btn-back:hover {
+  color: #4169e1;
+  background: #f6f6e9;
+  border: solid 2px #4169e1;
+}
+
+.create-item__ul-btn-back:focus,
+.edit-item__ul-btn-back:focus {
+  outline: 0;
+}
+
+.create-item__ul-input,
+.edit-item__ul-input {
+  width: 44px;
+}
+
+.create-item__ul-input-min,
+.edit-item__ul-input-min {
+  width: 24px;
+}
+
+.create-item__ul-textarea,
+.edit-item__ul-textarea {
+  width: 100%;
+  height: 190px;
+}
+
+.create-item__ul-btn-create,
+.edit-item__ul-btn-create {
+  font-size: 16px;
+  white-space: nowrap;
+  min-width: 48px;
+  display: flex;
+  text-decoration: none;
+  box-sizing: border-box;
+  border-radius: 5px;
+  letter-spacing: 5px;
+  transition: 0.3s;
+  outline: 0;
+  /* 入力の薄い枠を非表示  */
+  color: #f6f6e9;
+  background: #00a40f;
+  border: solid 2px #00a40f;
+  font-weight: bold;
+  padding: 4px 3px 2px 12px;
+}
+
+.create-item__ul-btn-create:hover,
+.edit-item__ul-btn-create:hover {
+  color: #00a40f;
+  background: #f6f6e9;
+  border: solid 2px #00a40f;
+}
+
+.create-item__ul-btn-del,
+.edit-item__ul-btn-del {
+  border-radius: 5px;
+  letter-spacing: 5px;
+  transition: 0.3s;
+  font-size: 16px;
+  margin-top: 8px;
+  padding: 4px 6px 3px;
+  color: #f6f6e9;
+  background-color: #ee0028;
+  border: 2px solid #ee0028;
+  display: inline-block;
+  vertical-align: middle;
+  box-sizing: border-box;
+  text-indent: 6px;
+  outline: 0;
+  /* 入力の薄い枠を非表示  */
+}
+
+.create-item__ul-btn-del:hover,
+.edit-item__ul-btn-del:hover {
+  color: #ee0028;
+  background: #f6f6e9;
+  border: solid 2px #ee0028;
+  text-decoration: none;
+}
+

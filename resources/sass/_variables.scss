@@ -17,3 +17,23 @@ $yellow: #ffed4a;
 $green: #38c172;
 $teal: #4dc0b5;
 $cyan: #6cb2eb;
+
+
+$font-size-16px:16px;
+
+$base-font-size:$font-size-16px;
+
+@mixin button {
+  font-size: $base-font-size;
+  white-space: nowrap;
+  min-width: 48px;
+  display: flex;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+@mixin button-style {
+  border-radius: 5px;
+  letter-spacing: 5px;
+  transition: 0.3s;
+}

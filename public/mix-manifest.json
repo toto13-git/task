@@ -1,5 +1,8 @@
 {
     "/js/alert.js": "/js/alert.js",
     "/js/app.js": "/js/app.js",
-    "/css/app.css": "/css/app.css"
+    "/css/app.css": "/css/app.css",
+    "/css/item_create_edit.css": "/css/item_create_edit.css",
+    "/css/item_show.css": "/css/item_show.css",
+    "/css/user_show.css": "/css/user_show.css"
 }

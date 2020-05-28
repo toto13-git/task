@@ -98,21 +98,21 @@
   }
 }
 
-&__list {
-  width: 500px;
-  display: inline-block;
-  margin-bottom: 0;
-  &-ul {
-    list-style: none;
-    font-weight: bold;
-    letter-spacing: 3px;
-    padding: 0;
-    &-li {
-      margin: 0;
-      display: inline-block;
-    }
-  }
-}
+// &__list {
+//   width: 500px;
+//   display: inline-block;
+//   margin-bottom: 0;
+//   &-ul {
+//     list-style: none;
+//     font-weight: bold;
+//     letter-spacing: 3px;
+//     padding: 0;
+//     &-li {
+//       margin: 0;
+//       display: inline-block;
+//     }
+//   }
+// }
 
 .item-show-wrapper {
   display: flex;
