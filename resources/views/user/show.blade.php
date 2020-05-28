@@ -162,7 +162,9 @@
       <div class="delete">
         <input type="submit" class="delete__btn" value="X" onclick="allDel(this);return false;">
       </div>
-      {{$items->links()}}
+      <div class="page">
+        {{$items->links()}}
+      </div>
     </div>
   </div>
 </div>
