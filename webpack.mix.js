@@ -13,4 +13,7 @@ const mix = require('laravel-mix');
 
 mix.js('resources/js/app.js', 'public/js')
   .js('resources/js/assets/alert.js', 'public/js')
-  .sass('resources/sass/app.scss', 'public/css');
+  .sass('resources/sass/app.scss', 'public/css')
+  .sass('resources/sass/item_create_edit.scss', 'public/css')
+  .sass('resources/sass/item_show.scss', 'public/css')
+  .sass('resources/sass/user_show.scss', 'public/css');

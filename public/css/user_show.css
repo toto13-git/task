@@ -1,8 +1,12 @@
+@charset "UTF-8";
+
 .menu {
   display: flex;
   height: 64px;
 }
-.menu__register-btn, .menu__list-btn {
+
+.menu__register-btn,
+.menu__list-btn {
   font-size: 16px;
   white-space: nowrap;
   min-width: 48px;
@@ -17,17 +21,23 @@
   border: solid 2px #00a40f;
   padding: 5px 12px 4px 18px;
 }
-.menu__register-btn:hover, .menu__list-btn:hover {
+
+.menu__register-btn:hover,
+.menu__list-btn:hover {
   color: #00a40f;
   background: #f6f6e9;
   border: solid 2px #00a40f;
 }
-.menu__register-btn:focus, .menu__list-btn:focus {
+
+.menu__register-btn:focus,
+.menu__list-btn:focus {
   outline: 0;
 }
+
 .menu__list {
   margin: 0 10px;
 }
+
 .menu__search-btn {
   font-size: 16px;
   padding: 5px 12px 5px 16px;
@@ -40,14 +50,17 @@
   letter-spacing: 5px;
   transition: 0.3s;
 }
+
 .menu__search-btn:hover {
   color: #00a40f;
   background: #f6f6e9;
   border: solid 2px #00a40f;
 }
+
 .menu__search-btn:focus {
   outline: 0;
 }
+
 .menu__search-area {
   font-size: 16px;
   margin-right: -4px;
@@ -58,12 +71,31 @@
   outline: 0;
   /* 入力の薄い枠を非表示  */
 }
+
+.menu__search ::-webkit-input-placeholder {
+  color: #ccc;
+}
+
+.menu__search ::-moz-placeholder {
+  color: #ccc;
+}
+
+.menu__search :-ms-input-placeholder {
+  color: #ccc;
+}
+
+.menu__search ::-ms-input-placeholder {
+  color: #ccc;
+}
+
 .menu__search ::placeholder {
   color: #ccc;
 }
+
 .delete {
   display: inline-block;
 }
+
 .delete__btn {
   font-size: 16px;
   font-weight: bold;
@@ -80,32 +112,21 @@
   /* 入力の薄い枠を非表示  */
   transition: 0.3s;
 }
+
 .delete__btn:hover {
   color: #ee0028;
   background: #f6f6e9;
   border: solid 2px #ee0028;
 }
-__list {
-  width: 500px;
-  display: inline-block;
-  margin-bottom: 0;
-}
-__list-ul {
-  list-style: none;
-  font-weight: bold;
-  letter-spacing: 3px;
-  padding: 0;
-}
-__list-ul-li {
-  margin: 0;
-  display: inline-block;
-}
+
 .item-show-wrapper {
   display: flex;
 }
+
 .item-show-wrapper__block {
   margin: 0 auto;
 }
+
 .item-show-wrapper__block-btn {
   border-radius: 5px;
   letter-spacing: 5px;
@@ -120,74 +141,95 @@ __list-ul-li {
   border: solid 2px #ffa500;
   box-sizing: border-box;
 }
+
 .item-show-wrapper__block-btn:hover {
   color: #ffa500;
   background: #f6f6e9;
   border: solid 2px #ffa500;
 }
+
 .item-show-wrapper__block-btn:focus {
   outline: 0;
 }
+
 .item-name {
   font-weight: bold;
 }
+
 .stock {
   white-space: pre;
 }
+
 .line {
   border: solid 0.5px #ffdead;
   margin-bottom: 8px;
 }
+
 .table-list {
   width: 100%;
 }
+
 .table-list th {
   color: #ff9800;
   background: #fff5e5;
   letter-spacing: 2px;
 }
+
 .table-list td {
   color: #808080;
   letter-spacing: 1px;
 }
+
 .table-list__th-top {
   width: 50px;
 }
+
 .table-list__th-bottom {
   width: 72px;
 }
+
 .table-list__tabel-edit {
   text-align: center;
 }
+
 .delbox-wrapper__block {
   margin: 24px 24px 24px 22px;
 }
+
 .time-limit {
   color: #ee0028;
   font-weight: bold;
 }
+
 .time-over {
   color: #fff;
   background-color: #dcdcdc;
 }
+
 .time-ago {
   font-weight: bold;
 }
+
 @media screen and (max-width: 900px) {
   .menu {
     display: block;
     margin-bottom: 32px;
   }
+
   .menu__search {
     margin: 0;
     vertical-align: middle;
   }
-  .menu__register, .menu__list {
+
+  .menu__register,
+  .menu__list {
     display: inline-block;
     margin-bottom: 10px;
   }
+
   .css-br::after {
     content: "\A";
     white-space: pre;
   }
 }
+
