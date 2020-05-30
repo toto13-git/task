@@ -81,51 +81,30 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./resources/js/assets/alert.js":
-/*!**************************************!*\
-  !*** ./resources/js/assets/alert.js ***!
-  \**************************************/
+/***/ "./resources/js/assets/day-limit.js":
+/*!******************************************!*\
+  !*** ./resources/js/assets/day-limit.js ***!
+  \******************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-deletePost = function deletePost(e) {
-  'use strict';
-
-  if (confirm('本当に削除していいですか?')) {
-    document.getElementById('delete_' + e.dataset.id).submit();
-  }
-};
-
-allDel = function allDel() {
-  var check = document.getElementsByClassName("delbox-wrapper__block-checkbox");
-  var array = Array.prototype.slice.call(check);
-
-  for (var i = 0; i < array.length; i += 1) {
-    if (array[i].checked === true) {
-      if (confirm('本当に削除していいですか?')) {
-        submit();
-      } else {
-        return false;
-      }
-    }
-  }
-};
+throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nError: ENOENT: no such file or directory, open '/Applications/MAMP/htdocs/task/resources/js/assets/day-limit.js'");
 
 /***/ }),
 
-/***/ 1:
-/*!********************************************!*\
-  !*** multi ./resources/js/assets/alert.js ***!
-  \********************************************/
+/***/ 3:
+/*!************************************************!*\
+  !*** multi ./resources/js/assets/day-limit.js ***!
+  \************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Applications/MAMP/htdocs/task/resources/js/assets/alert.js */"./resources/js/assets/alert.js");
+module.exports = __webpack_require__(/*! /Applications/MAMP/htdocs/task/resources/js/assets/day-limit.js */"./resources/js/assets/day-limit.js");
 
 
 /***/ })

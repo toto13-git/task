@@ -81,51 +81,44 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1);
+/******/ 	return __webpack_require__(__webpack_require__.s = 2);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./resources/js/assets/alert.js":
-/*!**************************************!*\
-  !*** ./resources/js/assets/alert.js ***!
-  \**************************************/
+/***/ "./resources/js/assets/change-color.js":
+/*!*********************************************!*\
+  !*** ./resources/js/assets/change-color.js ***!
+  \*********************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-deletePost = function deletePost(e) {
-  'use strict';
+if (document.URL.match(/item/)) {
+  changeColor = window.onload = function changeColor() {
+    var dayValue = document.getElementById('day');
+    var day = dayValue.getAttribute('data-day');
+    var dayStyle = document.getElementById("day");
 
-  if (confirm('本当に削除していいですか?')) {
-    document.getElementById('delete_' + e.dataset.id).submit();
-  }
-};
-
-allDel = function allDel() {
-  var check = document.getElementsByClassName("delbox-wrapper__block-checkbox");
-  var array = Array.prototype.slice.call(check);
-
-  for (var i = 0; i < array.length; i += 1) {
-    if (array[i].checked === true) {
-      if (confirm('本当に削除していいですか?')) {
-        submit();
-      } else {
-        return false;
-      }
+    if (day == "賞味期限が過ぎました") {
+      dayStyle.style.cssText = "color:#fff; background:#808080; padding:2px 5px 1px;";
     }
-  }
-};
+
+    if (day == "賞味期限は本日までです") {
+      dayStyle.style.cssText = "color:#ee0028; font-weight: bold;";
+    }
+  };
+}
 
 /***/ }),
 
-/***/ 1:
-/*!********************************************!*\
-  !*** multi ./resources/js/assets/alert.js ***!
-  \********************************************/
+/***/ 2:
+/*!***************************************************!*\
+  !*** multi ./resources/js/assets/change-color.js ***!
+  \***************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Applications/MAMP/htdocs/task/resources/js/assets/alert.js */"./resources/js/assets/alert.js");
+module.exports = __webpack_require__(/*! /Applications/MAMP/htdocs/task/resources/js/assets/change-color.js */"./resources/js/assets/change-color.js");
 
 
 /***/ })

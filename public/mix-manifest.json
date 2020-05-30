@@ -4,5 +4,6 @@
     "/css/app.css": "/css/app.css",
     "/css/item_create_edit.css": "/css/item_create_edit.css",
     "/css/item_show.css": "/css/item_show.css",
-    "/css/user_show.css": "/css/user_show.css"
+    "/css/user_show.css": "/css/user_show.css",
+    "/js/change-color.js": "/js/change-color.js"
 }
