@@ -43,7 +43,8 @@
                 残り期限
               </th>
               <td class="item-table__td">
-                {{$day}}
+                <span id="day" data-day="{{$day}}" onload="changeColor(this);">
+                  {{$day}}</span>
               </td>
             </tr>
             <tr>
